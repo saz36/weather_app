@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">    
+
+    <script src="https://kit.fontawesome.com/e0cc78af73.js" crossorigin="anonymous"></script>    
+
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    
+   
+    <body>
+
+    <div class="container"> 
+      
+      <h1>Weather
+        
+      </h1>
+      
+   <div class="location-search"> 
+      <div class="container text-center">
+        
+      <form id="user-input">
+        <label for="location">Enter your location</label>
+        <input id="data-input" type="search" autofocus />
+        <input type="submit" value="search"class="btn btn-primary
+        "  />
+        
+      </form>
+    
+    </div>
+  </div>
+
+  
+<section>   
+<div class="loc-date-time">
+  <div class="container text-center">
+  <div class="row">
+      <div class="col-6">
+        <h2 id="results-search" ></h2> 
+        <h2 id="temp-result"></h2>
+      </div>
+      <div class="col-6">
+      <h3 id="date-time">Date</h3>
+      </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+<div class="row">      
+    <div class="col-4">
+      <div class="card">
+      <div class="card-body">
+        <div id="wind">
+          <h6 class="card-title">WIND INFORMATION
+          <i class="fa-solid fa-wind wind-icon"></i></h6>
+                <p class="card-text"id ="speed"></p>
+        </div>
+      </div>
+      </div>
+  
+    <div class="card">
+        <div class="card-body">
+          <div id="precepitation">
+              <h6 class="card-title">PRECEPITATION INFORMATION
+              <i class="fa-solid fa-cloud cloud-icon"></i>
+              </h6>
+              <p class="card-text"id="rain"> </p>
+          </div>
+        </div>
+    </div>
+          
+</div>    
+
+      <div class="col-4">      
+      <div class="card">
+          <img src="src/images/weather-back.jpg" class="card-img-top" alt="clouds">
+            <div class="container text-center">
+              <div class="forecast">
+                  <h4 class="card-title">Forecast
+                  </h4>
+                  <p class="card-text"id ="summary"></p>           
+                  <i class="fa-solid fa-temperature-arrow-up"></i>               
+
+                  <span id="high">Highest 5</span>   
+                  Temperature 
+                  <span class="units">
+                  <a href="#" id="celsiusB">°C</a>
+                  <span class="pipe">|</span>
+                  <a href="#" id="fahrenheitB">°F</a>
+                  </span>
+                     
+                  <span id = "low"> Lowest -3</span>
+                  <i class="fa-solid fa-temperature-arrow-down"></i>  
+                </div>
+            </div>
+            </div>
+      </div>
+    
+      <div class="col-4">
+        <div class="card">
+        <div class="card-body">
+          <div id ="solar">
+            <h5 id ="rise" class="card-title">Sunrise    
+              <i class="fa-solid fa-sun"></i>
+            </h5>
+            <p class="card-text text-time">08.08</p>              
+            <h5 id = "set"class="card-title">Sunset
+              <i class="fa-regular fa-sun"></i>
+            </h5>
+            <p class="card-text">16.32</p>
+          </div>
+        
+        </div>
+      </div>
+</div>
+                
+        
+<div class="week">
+  <div class="row">
+        <div class="col">
+            <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Monday</h5>
+              <p class="card-text ">
+                <i class="fa-solid fa-temperature-arrow-up"></i>
+              Highest 5<span class ="units">°C</span>
+              <h6>TEMPERATURE
+                <span class ="units">°C<span class ="pipe">|</span>°F</span>
+              </h6> 
+              Lowest -3<span class ="units">°C</span>
+              <i class="fa-solid fa-temperature-arrow-down"></i>  
+            </p>            
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tuesday  
+                </h5>
+                <p class="card-text ">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                  Highest 3<span class ="units">°C</span>
+                  <h6>TEMPERATURE
+                    <span class ="units">°C<span class ="pipe">|</span>°F</span>
+                  </h6> Lowest -1<span class ="units">°C
+                  </span>
+                  <i class="fa-solid fa-temperature-arrow-down"></i>     
+                </p>
+            </div>
+            </div>      
+            </div>
+          <div class="col">
+              <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Wednesday
+                </h5>
+                <p class="card-text ">
+                <i class="fa-solid fa-temperature-arrow-up"></i>
+                  Highest 6<span class ="units">°C</span><h6>TEMPERATURE
+                    <span class ="units">°C<span class ="pipe">|</span>°F</span>
+                  </h6> Lowest 1<span class ="units">°C</span>
+                  <i class="fa-solid fa-temperature-arrow-down"></i>              
+                </p>
+              </div>
+              </div>
+            </div>
+          <div class="col">
+          <div class="card">
+            <div class="card-body">
+            <h5 class="card-title">Thursday</h5>
+            <p class="card-text ">
+            <i class="fa-solid fa-temperature-arrow-up"></i>
+              Highest 5
+              <span class ="units">°C</span>
+              <h6>TEMPERATURE<span class ="units">°C<span class ="pipe">|</span>°F</span>
+              </h6> Lowest 2<span class ="units">°C</span>
+              <i class="fa-solid fa-temperature-arrow-down"></i>              
+            </p>
+            </div>
+          </div>
+          </div>
+            
+          <div class="col">
+            <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Friday</h5>
+                <p class="card-text " > 
+                <i class="fa-solid fa-temperature-arrow-up"></i>               
+                Highest 8
+                <span class ="units">°C</span>
+                <h6>TEMPERATURE
+                  <span class ="units">°C<span class ="pipe">|</span>°F</span>
+                </h6> Lowest 5<span class ="units">°C</span>
+                <i class="fa-solid fa-temperature-arrow-down"></i>              
+              </p>
+            </div>
+            </div>
+          </div>
+   </div>
+   </div>
+              
+</div>
+
+	</script>
+</body>
+</html>
