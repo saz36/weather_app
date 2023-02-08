@@ -1,0 +1,98 @@
+.container {
+  background-color: #fff;
+}
+
+h1 {
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 75px;
+  text-align: center;
+  color: #0a56c8;
+}
+h2 {text-transform:uppercase;
+    font-size: 22px;
+}
+
+h3, h2 {color:rgb(99, 21, 122);
+        line-height:25px;
+        font-size: 22px;
+        
+      }
+.location-search {
+  margin: 0 auto;
+  padding: 30px 0px 25px 110px;
+ color:rgb(99, 21, 122);
+ font-weight:900;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+}
+.loc-date-time {
+  margin: 0 auto;
+  padding: 20px 10px 45px 10px;
+  text-align: center;
+}
+
+.wind,
+.rain,
+.forecast,
+.solar {
+  margin: 0 auto;
+  text-align: center;
+}
+.wind-icon {
+  font-size: 20px;
+}
+
+.wind {
+  margin: 0 auto;
+  text-align: center;
+}
+.wind h6 {
+  color: royalblue;
+}
+.wind-icon {
+  font-size: 20px;
+}
+
+.rain h6 {
+  color: #57a6b0;
+}
+.cloud-icon {
+  font-size: 20px;
+}
+.forecast h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
+.forecast h6 {
+  font-size: 25px;
+  text-align: justify;
+}
+.units{
+  position: relative;
+  font-size: 10px;
+  top: -4px;
+}
+
+.solar h5 {
+  color: #ef6531;
+}
+
+.week {
+  margin: 0 auto;
+  padding: 25px 50px 25px 50px;
+  text-align: center;
+}
+.week h5 {
+  color: #7b71c3;
+}
+.week h6 {
+  color: #ef6531;
+}
+.pipe{
+  position: relative;
+  font-size: 10px;
+  top: 0px;
+}
+
+    
