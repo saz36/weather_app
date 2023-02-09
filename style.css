@@ -63,13 +63,8 @@ h2 {
   font-size: 25px;
   text-align: justify;
 }
-.units {
-  position: relative;
-  font-size: 10px;
-  top: -4px;
-}
-
-.solar h5 {
+.sunrise-icon,
+.sunset-icon {
   color: #ef6531;
 }
 
@@ -81,9 +76,14 @@ h2 {
 .week h5 {
   color: #7b71c3;
 }
-.sunrise-icon,
-.sunset-icon {
+.week h6 {
   color: #ef6531;
+}
+
+.units {
+  position: relative;
+  font-size: 10px;
+  top: -4px;
 }
 .pipe {
   position: relative;
